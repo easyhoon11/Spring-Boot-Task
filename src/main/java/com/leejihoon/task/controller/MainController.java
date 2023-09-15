@@ -22,17 +22,17 @@ public class MainController {
 
     @PostMapping("task")
     public String postSchedule(@RequestBody PostRequestBodyDto bodyDto){
-        return "일정 작성하기" + bodyDto.getScheduleName() + bodyDto.getCategory() + bodyDto.getDescription() + bodyDto.getDate() + bodyDto.getTime();
+        return "일정 작성하기" + " " + bodyDto.getScheduleName() + " " + bodyDto.getCategory() + " " + bodyDto.getDescription() + " " + bodyDto.getDate() + " " + bodyDto.getTime();
     }
 
     @PatchMapping("task/{taskNumber}")
     public String patchSchedule(@RequestBody PostRequestBodyDto bodyDto){
-         return "일정 수정하기" + bodyDto.getScheduleName() + bodyDto.getCategory() + bodyDto.getDescription() + bodyDto.getDate() + bodyDto.getTime();
+         return "일정 수정하기" + " " + bodyDto.getScheduleName() + " " + bodyDto.getCategory() + " " + bodyDto.getDescription() + " " + bodyDto.getDate() + " " + bodyDto.getTime();
     }
 
     @DeleteMapping("task/{taskNumber}")
     public String deleteSchedule(){
-        return "삭제합니다.";
+        return "일정 삭제하기";
     }
 }
 
