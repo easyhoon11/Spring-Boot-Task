@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.leejihoon.task.dto.request.PatchRequestBodyDto;
 import com.leejihoon.task.dto.request.PostRequestBodyDto;
 
 @RestController
@@ -23,13 +24,13 @@ public class MainController {
     }
 
     @PostMapping("task")
-    public String postSchedule(@Valid @RequestBody PostRequestBodyDto bodyDto){
-        return "일정 작성하기" + " " + bodyDto.getScheduleName() + " " + bodyDto.getCategory() + " " + bodyDto.getDescription() + " " + bodyDto.getDate() + " " + bodyDto.getTime();
+    public String postSchedule(@Valid @RequestBody PostRequestBodyDto postBodyDto){
+        return "일정 작성하기 " + "일정이름: " + postBodyDto.getScheduleName() + "카테고리: " + postBodyDto.getCategory() + "설명: " + postBodyDto.getDescription() + "날짜: " + postBodyDto.getDate() + "시간: " + postBodyDto.getTime();
     }
 
     @PatchMapping("task/{taskNumber}")
-    public String patchSchedule(@Valid @RequestBody PostRequestBodyDto bodyDto){
-        return "일정 수정하기" + " " + bodyDto.getScheduleName() + " " + bodyDto.getCategory() + " " + bodyDto.getDescription() + " " + bodyDto.getDate() + " " + bodyDto.getTime();
+    public String patchSchedule(@Valid @RequestBody PatchRequestBodyDto patchBodyDto){
+        return "일정 수정하기" + "일정번호: " + patchBodyDto.getTaskNumber() + "일정이름: " + patchBodyDto.getScheduleName() + "카테고리: " + patchBodyDto.getCategory() + "설명: " + patchBodyDto.getDescription() + "날짜: " + patchBodyDto.getDate() + "시간: " + patchBodyDto.getTime();
     }
 
     @DeleteMapping("task/{taskNumber}")
