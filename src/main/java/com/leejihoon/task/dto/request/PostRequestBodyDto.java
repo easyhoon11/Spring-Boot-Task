@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 @Setter
 @Getter
@@ -12,14 +12,14 @@ import javax.validation.constraints.NotBlank;
 @AllArgsConstructor
 public class PostRequestBodyDto {
     
-    @NotBlank
+    @NotEmpty
     private String scheduleName;
-    @NotBlank
+    @NotEmpty
     private String category;
-    @NotBlank
+    @NotEmpty
     private String description;
-    @NotBlank
+    @NotEmpty
     private String date;
-    @NotBlank
+    @NotEmpty
     private String time;
 }

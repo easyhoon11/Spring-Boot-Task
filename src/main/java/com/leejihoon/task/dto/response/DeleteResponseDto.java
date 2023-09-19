@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ResponseDto {
-    private String code;
-    private String message;
+public class DeleteResponseDto extends ResponseDto{
+
+    }
 }

@@ -10,5 +10,5 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PatchRequestBodyDto extends PostRequestBodyDto {
-    private String taskNumber;
+    private Integer taskNumber;
 }

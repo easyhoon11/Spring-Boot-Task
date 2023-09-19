@@ -1,12 +1,5 @@
 package com.leejihoon.task.dto.response;
 
-import lombok.Getter;
+public class PostResponseDto extends ResponseDto {
 
-@Getter
-public class PostResponseDto extends ResponseDto{
-
-    public PostResponseDto(String code, String message) {
-        super(code, message);
-    }
-    
 }
